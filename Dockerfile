@@ -32,8 +32,8 @@ RUN chown -R $USER:$USER $SERVER
 USER $USER
 RUN curl http://media.steampowered.com/client/steamcmd_linux.tar.gz | tar -C $SERVER -xvz \
     && $SERVER/update.sh
-RUN curl https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git970-linux.tar.gz | tar -C $SERVE/csgo/csgo R -xvz
-RUN curl https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6280-linux.tar.gz | tar -C $SERVE/csgo/csgo R -xvz
+RUN curl https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git970-linux.tar.gz | tar -C $SERVER/csgo/csgo R -xvz
+RUN curl https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6280-linux.tar.gz | tar -C $SERVER/csgo/csgo R -xvz
 
 EXPOSE 27015/udp
 
